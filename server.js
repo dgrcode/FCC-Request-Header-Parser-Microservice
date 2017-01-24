@@ -20,6 +20,10 @@ app.get('/api/whoami', (req, res) => {
     res.end(JSON.stringify(result));
 });
 
+app.use((req, res) => {
+	res.end('To use this app go to https://dgr-request-header-parser.herokuapp.com/api/whoami')
+});
+
 app.listen(process.env.PORT);
 console.log('App listening on port ' + process.env.PORT);
 
